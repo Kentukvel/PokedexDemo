@@ -8,11 +8,19 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @StateObject var settingsViewModel: SettingsViewModel
+    
     var body: some View {
-        Text("Settings")
+        VStack {
+            Button("Privacy Policy") {
+
+            }
+            Spacer()
+         }
+        .padding(.top, 50)
     }
 }
 
 #Preview {
-    SettingsView()
+    SettingsView(settingsViewModel: SettingsViewModel())
 }

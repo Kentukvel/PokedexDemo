@@ -12,7 +12,7 @@ struct DemoCoordinatorApp: App {
 
     var body: some Scene {
         WindowGroup {
-            NavigationControllerRepresentable()
+            ApplicationCoordinatorRepresentable()
         }
     }
 }

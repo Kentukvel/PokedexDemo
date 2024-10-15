@@ -21,7 +21,7 @@ class SettingsCoordinator: Coordinator  {
     }
     
     func start() {
-        let settingsView = SettingsView()
+        let settingsView = SettingsView(settingsViewModel: SettingsViewModel())
         let hostingController = UIHostingController(rootView: settingsView)
         
         navigationController.pushViewController(hostingController, animated: true)

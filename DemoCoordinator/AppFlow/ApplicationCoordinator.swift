@@ -40,13 +40,13 @@ class ApplicationCoordinator: Coordinator  {
   
 }
 
-struct NavigationControllerRepresentable: UIViewControllerRepresentable {
+struct ApplicationCoordinatorRepresentable: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> UINavigationController {
         let navigationController = UINavigationController()
         navigationController.setNavigationBarHidden(true, animated: false)
 
         let coordinator = ApplicationCoordinator(navigationController: navigationController)
-        coordinator.start() // Запуск координатора
+        coordinator.start()
         return navigationController
     }
     
