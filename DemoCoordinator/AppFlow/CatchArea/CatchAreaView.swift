@@ -35,13 +35,18 @@ struct CatchAreaView: View {
     var body: some View {
         Chart {
             ForEach(stackedBarData) { shape in
-                   BarMark(
-                       x: .value("Shape Type", shape.type),
-                       y: .value("Total Count", shape.count)
-                   )
-                   .foregroundStyle(by: .value("Shape Color", shape.color))
-               }
+                BarMark(
+                    x: .value("Shape Type", shape.type),
+                    y: .value("Total Count", shape.count)
+                )
+                .foregroundStyle(by: .value("Shape Color", shape.color))
+            }
         }
+        .chartForegroundStyleScale([
+            "Green": .green, "Purple": .purple, "Pink": .pink, "Yellow": .yellow
+        ])
+        .padding()
+        .padding(.bottom, 100)
     }
 }
 
