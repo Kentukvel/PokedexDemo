@@ -21,7 +21,8 @@ class CatchAreaCoordinator: Coordinator  {
     }
     
     func start() {
-        let catchAreaView = CatchAreaView()
+        let viewModel = CatchAreaViewModel()
+        let catchAreaView = CatchAreaView(catchAreaViewModel: viewModel)
         let hostingController = UIHostingController(rootView: catchAreaView)
         
         navigationController.pushViewController(hostingController, animated: true)
